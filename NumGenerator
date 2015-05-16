@@ -1,0 +1,50 @@
+import random
+
+#
+# PROCEDURES
+#
+
+#1. Procedure for generating random number
+def numbergen(number):
+    while True:
+        print (random.randrange(1, number))
+        repeat = input('Would you like another? (Y/N)')
+        repeat = repeat.lower()
+        if repeat == 'y' or repeat == 'yes':
+            continue
+        elif repeat == 'n' or repeat == 'no':
+            return
+        
+#3. character test procedure
+def charIntTest(selection):
+    while True:
+        if selection == 'e' or selection == 'E':
+            exit()
+        try:
+            intTarget = int(selection)
+        except ValueError:
+            pass
+        else:
+            if intTarget < 1:
+                pass
+            else:
+                return (intTarget)
+        print('Please enter a valid selection.')
+        menu()
+        selection = input('Selection: ')
+
+#2. Menu function        
+def menu():
+    print ('Select an upper limit for your random number,')
+    print ('or enter "e" to exit.\n')
+
+
+#
+#MAIN SCRIPT
+#
+
+while True:
+    menu()
+    answer = input('Selection: ')
+    numbergen(charIntTest(answer))
+    
