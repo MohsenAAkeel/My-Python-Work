@@ -1,0 +1,7 @@
+#1. Sums and averages user list
+def listSum(entry):
+    return sum(entry)/len(entry)
+
+#Main Script
+userList = [int(i) for i in input("Enter your numbers separated by a comma: ").split(",")]
+print ("The average of your list is: ", listSum(userList))
