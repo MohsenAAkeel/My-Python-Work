@@ -1,0 +1,78 @@
+from random import random
+
+L = []
+i = 0
+while i < 10:
+    L.append(i+10)
+    i += 1
+print (L)
+
+L = []
+for i in range(10):
+    L.append(i)
+print (L)
+
+L = list(range(10))
+print (L)
+
+L = [i*i for i in range(10)]
+print (L)
+
+L = []
+for i in range(10):
+    L.append(i*i)
+print (L)
+
+L = []
+for i in range(10):
+    L.append(random()*100)
+print (L)
+
+print ([random() for _ in range(10)])
+
+c = 2
+print ([c*i for i in range(10)])
+
+def f(x):
+    return 2*x
+
+print ([f(i) for i in range(10)])
+
+L = []
+for i in range(10):
+    if i%3 != 0:
+        L.append(i*i)
+print (L)
+
+print ([i*i for i in range(10) if i%3 != 0])
+
+L = []
+for i in range(10):
+    for j in {2, 5, 9}:
+        L.append((i,j))
+print (L)
+
+print ([(i,j) for i in range(10) for j in {2, 5, 9}])
+
+list_of_lists = []
+for i in range(4):
+    L = []
+    for j in range(5):
+        L.append(j)
+    list_of_lists.append(L)
+print (list_of_lists)
+
+
+list_of_lists = []
+for i in range(4):
+    L = []
+    for j in range(5):
+        L.append(i*j)
+    list_of_lists.append(L)
+print (list_of_lists)
+
+
+list_of_lists = []
+for i in range(4):
+    list_of_lists.append([i*j for j in range(5)])
+print (list_of_lists)
