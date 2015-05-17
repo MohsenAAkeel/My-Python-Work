@@ -1,6 +1,11 @@
 import random
 from time import sleep
 
+#
+# Procedures
+#
+
+#1. This fxn tests if the guess is proper
 def charIntTest(selection):
     while True:
         try:
@@ -13,6 +18,11 @@ def charIntTest(selection):
             else:
                 return (intTarget)
         selection = input('You need to guess a proper number! ')
+
+
+#
+# MAIN SCRIPT
+#
 
 print ("I will pick a number between 1 and 100. YOU will have to guess that number.")
 compNum = random.randrange(1,100)
