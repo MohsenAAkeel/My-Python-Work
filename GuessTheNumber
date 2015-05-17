@@ -1,0 +1,32 @@
+import random
+from time import sleep
+
+def charIntTest(selection):
+    while True:
+        try:
+            intTarget = int(selection)
+        except ValueError:
+            pass
+        else:
+            if intTarget < 1:
+                pass
+            else:
+                return (intTarget)
+        selection = input('You need to guess a proper number! ')
+
+print ("I will pick a number between 1 and 100. YOU will have to guess that number.")
+compNum = random.randrange(1,100)
+
+print ("Hmmm...")
+sleep(3)
+print("Okay! I got one!")
+guess = charIntTest(input('What is your guess? '))
+while True:
+    if guess < compNum:
+        print ("Ohhhh, too low!")
+    elif guess > compNum:
+        print ("Ahhh, too high!")
+    else:
+        print("Whoa! You got it!")
+        break
+    guess = charIntTest(input('Go ahead and guess again! '))
